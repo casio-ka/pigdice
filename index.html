@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amethysta|Arapey|Nixie+One|Lato">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title></title>
+  </head>
+  <body>
+
+    <section class="control-panel d-flex justify-content-center mb-5">
+      <button class="btn btn-outline-light align-middle" id="rules" data-toggle="modal" data-target="#Rules">Rules</button>
+
+      <div class="modal fade" id="Rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pig Dice</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+              <h3>How to play</h3>
+              <p>First player rolls the die repeatedly until either:</p>
+              <li>1 is rolled</li>
+              <li>The player chooses to hold (stop rolling)</li>
+              <br>
+              <p>If the player chooses to hold, all of the points rolled during that turn are added to their score.</p>
+              <p>First Player to score 100 points Wins!</p>
+              <p>Good luck!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="vertical-center">
+        <div class="col-md-4">
+          <div id="p1-panel" class="card">
+            <div id="p1-panel-header" class="card-header text-center">Player 1</div>
+            <div class="card-body">
+              <p class="card-title">Score: <span id="p1-score"></span></p>
+              <p class="card-text">Turn Total: <span id="p1-turn-total"></span></p>
+
+              <div id="p1-buttons">
+                <button id="roll" class="btn btn-primary">Roll!</button>
+                <button id="hold" class="btn btn-success">Hold</button>
+              </div>
+              <div id="p1-buttons-disabled">
+                <fieldset disabled>
+                  <button id="roll" class="btn btn-primary">Roll!</button>
+                  <button id="hold" class="btn btn-success">Hold</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <center><span id="roll-result"></span></center>
+        </div>
+
+        <div class="col-md-4">
+          <div id="p2-panel" class="card">
+            <div id="p2-panel-header" class="card-header text-center">Player 2</div>
+            <div class="card-body">
+              <p class="card-title">Score: <span id="p2-score"></span></p>
+              <p class="card-text">Turn Total: <span id="p2-turn-total"></span></p>
+
+              <div id="p2-buttons">
+                <button id="roll" class="btn btn-primary">Roll!</button>
+                <button id="hold" class="btn btn-success">Hold</button>
+              </div>
+              <div id="p2-buttons-disabled">
+                <fieldset disabled>
+                  <button id="roll" class="btn btn-primary">Roll!</button>
+                  <button id="hold" class="btn btn-success">Hold</button>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
